@@ -1,0 +1,50 @@
+.modal-text {
+  @apply text-center;
+}
+
+.modal-close-action {
+  & .button {
+    @apply relative -top-sm outline-none bg-support-200 border-support-200 text-support-500 !important;
+  }
+
+  & .icon {
+    @apply absolute -bottom-md;
+  }
+
+  @screen md {
+    @apply h-auto mb-none;
+  }
+}
+
+.overlay {
+  @apply fixed top-none left-none bg-support-500 z-50;
+  @apply bg-opacity-75 w-screen h-full text-center block;
+
+  &:after {
+    content: '';
+    @apply inline-block h-full align-middle;
+  }
+
+  & .modal {
+    @apply absolute bottom-none left-none w-screen max-w-screen rounded-t-2xlg;
+
+    &:focus {
+      @apply outline-none;
+    }
+  }
+
+  @screen md {
+    @apply overflow-y-auto;
+
+    & .modal {
+      @apply inline-block align-middle relative;
+      @apply bottom-auto left-auto rounded-xlg w-8xlg;
+    }
+  }
+
+  @screen lg {
+    & .modal {
+      @apply w-9xlg;
+    }
+  }
+}

@@ -1,0 +1,69 @@
+@import '../../styles/typography';
+@import '../../styles/interactions';
+
+.phone-field {
+  @apply transition-all duration-quickly text-support-500 relative;
+
+  @mixin text-lg;
+
+  & .label {
+    @apply leading-md;
+  }
+
+  & .label-active {
+    @mixin text-sm;
+    @apply text-support-400;
+  }
+
+  & .input {
+    @apply w-full bg-transparent outline-none tracking-unset;
+  }
+
+  &.-focused .input-wrapper {
+    @apply border-primary-200;
+  }
+
+  &.-invalid .input-wrapper {
+    @apply border-critical-300;
+  }
+
+  & .input-wrapper {
+    @apply border-b-sm border-support-400 transition-all duration-quickly;
+
+    @mixin on-hover {
+      @apply border-primary-200;
+    }
+  }
+
+  & .input-container {
+    @apply z-10;
+  }
+
+  &.-disabled {
+    @apply text-support-400;
+
+    & .input-wrapper {
+      @apply border-support-400;
+    }
+  }
+
+  @screen md {
+    & .label {
+      @apply leading-xlg;
+    }
+
+    & .input-wrapper {
+      @apply border-b-md;
+    }
+  }
+
+  @screen lg {
+    & .label {
+      @apply leading-2xlg;
+    }
+
+    & .input-wrapper {
+      @apply border-b-md;
+    }
+  }
+}

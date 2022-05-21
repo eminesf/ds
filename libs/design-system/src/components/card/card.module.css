@@ -1,0 +1,48 @@
+@import '../../styles/interactions';
+@import '../../styles/border';
+
+.card {
+  @apply outline-none relative border-sm overflow-hidden rounded-md transition-all duration-quickly;
+
+  & .highlighted-message {
+    @apply -left-3xsm -right-3xsm bottom-none rounded-b-md absolute;
+  }
+
+  &.-focused {
+    @apply ring;
+  }
+
+  &.-clickable {
+    @mixin on-hover {
+      @mixin set-shadow-border --spacing-3-xsm, --color-primary-200;
+    }
+  }
+
+  &.-support {
+    @apply border-support-300;
+  }
+
+  &.-alert {
+    @apply border-alert-200;
+  }
+
+  &.-none {
+    @apply border-none;
+  }
+}
+
+.card-image {
+  @apply object-contain;
+}
+
+.with-margin {
+  margin-bottom: 8px;
+}
+
+.card-star {
+  @apply absolute right-none top-none z-10;
+}
+
+.card-wrapper {
+  @apply relative;
+}

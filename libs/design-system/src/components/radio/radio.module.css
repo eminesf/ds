@@ -1,0 +1,124 @@
+@import '../../styles/typography';
+@import '../../styles/interactions';
+@import '../../styles/border';
+
+.radio-group {
+  &.-highlighted .label .icon-wrapper:before {
+    @mixin heading-sm;
+  }
+
+  & .radio.-checked .label {
+    @mixin set-shadow-border --spacing-3-xsm, --color-primary-300;
+  }
+}
+
+.radio {
+  @apply relative;
+
+  &.-focused .label {
+    @apply ring;
+  }
+
+  & .label {
+    @apply border-sm rounded-pill border-support-300 transition-all duration-quickly z-10;
+
+    & .icon-wrapper {
+      @apply text-primary-300 relative;
+
+      & .icon {
+        @apply absolute top-1/2 transform -translate-y-1/2 left-none;
+
+        &.-filled {
+          @apply opacity-0;
+        }
+      }
+
+      &:before {
+        content: '.';
+
+        @apply invisible w-md;
+        @mixin text-md;
+      }
+    }
+  }
+
+  & .highlight-message {
+    @apply relative rounded-t-lg;
+
+    &:before {
+      content: '';
+
+      @apply absolute bg-inherit w-full h-md -bottom-md left-none;
+    }
+
+    & .icon {
+      @apply ml-3xsm;
+    }
+  }
+
+  &.-highlighted .label {
+    @apply border-primary-200 border-md;
+  }
+
+  &:not(.-expanded) .content {
+    @apply overflow-hidden;
+
+    & > * {
+      @apply truncate;
+    }
+  }
+
+  &.-expanded .label {
+    @apply rounded-md;
+  }
+
+  &:not(.-disabled) {
+    @mixin on-hover {
+      & .label .icon {
+        @apply opacity-0;
+
+        &.-filled {
+          @apply opacity-100;
+        }
+      }
+    }
+  }
+
+  &.-checked .label .icon {
+    @apply opacity-0;
+
+    &.-filled {
+      @apply opacity-100;
+    }
+  }
+
+  &:not(.-checked):not(.-disabled) {
+    @mixin on-hover {
+      & .label .icon-wrapper {
+        @apply text-primary-100;
+      }
+    }
+  }
+
+  &.-disabled {
+    & .icon-wrapper {
+      @apply text-support-400;
+    }
+
+    &.-highlighted .label {
+      @apply border-support-400;
+    }
+  }
+
+  @screen md {
+    & .highlight-message:before {
+      @apply h-lg -bottom-lg;
+    }
+  }
+
+  @screen lg {
+    & .highlight-message:before {
+      @apply h-xlg -bottom-xlg;
+    }
+  }
+}

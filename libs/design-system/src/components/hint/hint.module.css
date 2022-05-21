@@ -1,0 +1,28 @@
+.hint {
+  @apply border-sm rounded-sm;
+
+  &.-success {
+    @apply border-success-200 bg-success-100;
+  }
+
+  &.-alert {
+    @apply border-alert-200 bg-alert-100;
+  }
+
+  &.-critical {
+    @apply border-critical-200 bg-critical-100;
+  }
+
+  &.-neutral {
+    @apply border-primary-100 bg-primary-50;
+  }
+
+  &.-floatable {
+    @apply fixed top-sm left-sm border-none z-50;
+    right: calc(var(--spacing-sm) + var(--scrollbar-width));
+
+    &-headered {
+      top: calc(var(--spacing-sm) + var(--spacing-3-xlg));
+    }
+  }
+}

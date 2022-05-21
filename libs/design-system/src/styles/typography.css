@@ -1,0 +1,111 @@
+@define-mixin text-xsm {
+  & {
+    @apply text-2xsm leading-md tracking-xlg;
+  }
+}
+
+@define-mixin text-sm {
+  & {
+    @apply text-xsm leading-md tracking-xlg;
+
+    @screen md {
+      @apply text-md leading-xlg tracking-lg;
+    }
+
+    @screen lg {
+      @apply text-lg leading-2xlg tracking-md;
+    }
+  }
+}
+
+@define-mixin text-md {
+  & {
+    @apply text-sm leading-xlg tracking-xlg;
+
+    @screen md {
+      @apply text-lg leading-3xlg tracking-lg;
+    }
+
+    @screen lg {
+      @apply text-xlg leading-5xlg tracking-md;
+    }
+  }
+}
+
+@define-mixin text-lg {
+  & {
+    @apply text-md leading-2xlg tracking-xlg;
+
+    @screen md {
+      @apply text-xlg leading-5xlg tracking-lg;
+    }
+
+    @screen lg {
+      @apply text-2xlg leading-7xlg tracking-md;
+    }
+  }
+}
+
+@define-mixin heading-sm {
+  & {
+    @apply text-xlg leading-2xlg tracking-xlg;
+
+    @screen md {
+      @apply text-2xlg leading-3xlg tracking-lg;
+    }
+
+    @screen lg {
+      @apply text-5xlg leading-7xlg tracking-sm;
+    }
+  }
+}
+
+@define-mixin heading-md {
+  & {
+    @apply text-2xlg leading-4xlg tracking-xlg;
+
+    @screen md {
+      @apply text-5xlg leading-7xlg tracking-lg;
+    }
+
+    @screen lg {
+      @apply text-8xlg leading-10xlg tracking-sm;
+    }
+  }
+}
+
+@define-mixin heading-lg {
+  & {
+    @apply text-3xlg leading-6xlg tracking-xlg;
+
+    @screen md {
+      @apply text-7xlg leading-9xlg tracking-lg;
+    }
+
+    @screen lg {
+      @apply text-11xlg leading-12xlg tracking-sm;
+    }
+  }
+}
+
+@define-mixin heading-xlg {
+  & {
+    @apply text-5xlg leading-7xlg tracking-xlg;
+
+    @screen md {
+      @apply text-9xlg leading-11xlg tracking-lg;
+    }
+
+    @screen lg {
+      @apply text-13xlg leading-14xlg tracking-sm;
+    }
+  }
+}
+
+@define-mixin occupy-height {
+  &::before {
+    content: '.';
+
+    @apply invisible leading-inherit w-none inline-block;
+  }
+}

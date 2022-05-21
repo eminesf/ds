@@ -1,0 +1,41 @@
+{
+  "border": {
+    "width": {
+      "sm": {
+        "value": "1px"
+      },
+      "md": {
+        "value": "2px"
+      },
+      "lg": {
+        "value": "4px"
+      }
+    },
+    "radius": {
+      "none": {
+        "value": 0
+      },
+      "sm": {
+        "value": "4px"
+      },
+      "md": {
+        "value": "8px"
+      },
+      "lg": {
+        "value": "12px"
+      },
+      "xlg": {
+        "value": "16px"
+      },
+      "2xlg": {
+        "value": "32px"
+      },
+      "circle": {
+        "value": "50%"
+      },
+      "pill": {
+        "value": "20rem"
+      }
+    }
+  }
+}

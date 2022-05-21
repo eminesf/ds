@@ -1,0 +1,28 @@
+.provider {
+  --background-color: var(--color-transparent);
+
+  background-color: var(--background-color);
+
+  @apply min-h-screen overflow-auto relative;
+
+  &.-headered:not(.-header-offset-app):not(.-header-offset-site):before {
+    content: '';
+
+    @apply w-full absolute top-none left-none;
+
+    z-index: 2;
+    box-shadow: 0px 0 100px 50px rgb(0 0 0 / 50%);
+  }
+
+  &.-header-offset-app {
+    @apply pt-3xlg;
+  }
+
+  &.-header-offset-site {
+    @apply pt-7xlg;
+  }
+
+  &.-fullScreen {
+    @apply h-screen;
+  }
+}

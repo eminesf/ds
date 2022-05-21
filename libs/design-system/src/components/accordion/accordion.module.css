@@ -1,0 +1,33 @@
+.accordion-item {
+  & .button {
+    @apply text-left transition-colors duration-quickly outline-none relative text-support-500;
+
+    span {
+      @apply font-bold;
+    }
+
+    &:hover {
+      span {
+        @apply text-primary-300;
+      }
+    }
+  }
+
+  &.-focused .button {
+    @apply ring;
+  }
+
+  &.-activated {
+    & .icon {
+      @apply transform rotate-180 ease-ease-out duration-quickly;
+    }
+  }
+}
+
+.accordion-separator {
+  @apply border-b-sm border-support-300;
+}
+
+.region {
+  @apply text-sm md:text-md lg:text-lg;
+}

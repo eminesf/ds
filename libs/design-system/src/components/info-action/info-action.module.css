@@ -1,0 +1,13 @@
+.title {
+  margin-bottom: 8px;
+}
+
+.sub-title {
+  font-size: 24px !important;
+  line-height: 32px !important;
+  margin-bottom: 8px;
+}
+
+.icon {
+  display: inline-block !important;
+}

@@ -1,0 +1,11 @@
+.icon-button {
+  @apply outline-none;
+
+  &.-focused {
+    @apply ring;
+  }
+
+  &.-disabled {
+    @apply opacity-25;
+  }
+}

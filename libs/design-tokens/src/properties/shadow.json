@@ -1,0 +1,23 @@
+{
+  "shadow": {
+    "elevation": {
+      "1": {
+        "value": "0px 3px 3px rgba(9, 30, 66, 0.25), 0px 0px 3px rgba(9, 30, 66, 0.31)"
+      },
+      "2": {
+        "value": "0px 8px 12px rgba(9, 30, 66, 0.2), 0px 0px 3px rgba(9, 30, 66, 0.31)"
+      },
+      "3": {
+        "value": "0px 16px 30px rgba(9, 30, 66, 0.15), 0px 0px 3px rgba(9, 30, 66, 0.31)"
+      },
+      "4": {
+        "value": "0px -4px 6px -5px #73758C"
+      }
+    },
+    "hover": {
+      "1": {
+        "value": "0px 3px 4px rgba(63, 63, 63, 0.15), 0px 6px 10px rgba(38, 107, 255, 0.3)"
+      }
+    }
+  }
+}

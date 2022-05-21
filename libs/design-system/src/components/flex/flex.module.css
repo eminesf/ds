@@ -1,0 +1,38 @@
+.flex {
+  --flex-gap: var(--spacing-none);
+  --flex-wrap: no-wrap;
+  --flex-grow: 0;
+  --flex-order: 0;
+  --flex-width: auto;
+  --flex-shrink: 1;
+  --flex-height: auto;
+  --flex-margin-x: var(--spacing-none);
+  --flex-margin-y: var(--spacing-none);
+  --flex-direction: row;
+  --flex-min-width: auto;
+  --flex-min-height: auto;
+  --flex-align-items: normal;
+  --flex-padding-top: var(--spacing-none);
+  --flex-padding-left: var(--spacing-none);
+  --flex-padding-right: var(--spacing-none);
+  --flex-padding-bottom: var(--spacing-none);
+  --flex-justify-content: normal;
+  --flex-background-color: transparent;
+
+  gap: var(--flex-gap);
+  order: var(--flex-order);
+  width: var(--flex-width);
+  margin: var(--flex-margin-y) var(--flex-margin-x);
+  height: var(--flex-height);
+  display: flex;
+  padding: var(--flex-padding-top) var(--flex-padding-right) var(--flex-padding-bottom)
+    var(--flex-padding-left);
+  flex-grow: var(--flex-grow);
+  flex-wrap: var(--flex-wrap);
+  min-width: var(--flex-min-width);
+  min-height: var(--flex-min-height);
+  background: var(--flex-background-color);
+  align-items: var(--flex-align-items);
+  flex-direction: var(--flex-direction);
+  justify-content: var(--flex-justify-content);
+}

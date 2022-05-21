@@ -1,0 +1,10 @@
+.app-loader {
+  @apply text-center;
+
+  & .icon {
+    width: 136px;
+    height: 136px;
+
+    @apply fill-primary-200;
+  }
+}

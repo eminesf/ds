@@ -1,0 +1,11 @@
+.match-area {
+  @apply relative w-8xlg h-8xlg;
+
+  & img {
+    @apply absolute top-none left-none w-full h-full object-cover;
+  }
+
+  & footer {
+    @apply z-10 relative w-full flex items-end justify-center h-full pb-sm;
+  }
+}

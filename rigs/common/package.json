@@ -1,0 +1,26 @@
+{
+  "name": "@agi/common-rig",
+  "version": "1.0.0",
+  "scripts": {
+    "build": ""
+  },
+  "devDependencies": {
+    "@storybook/theming": "^6.3.0",
+    "@storybook/addon-actions": "^6.3.0",
+    "camelcase": "^6.2.0",
+    "@storybook/addon-essentials": "^6.3.0",
+    "mq-polyfill": "^1.1.8",
+    "esbuild": "^0.12.11",
+    "react-dom": "^17.0.2",
+    "ts-jest": "^27.0.3",
+    "typescript": "^4.3.4",
+    "@storybook/builder-webpack5": "^6.3.2",
+    "@storybook/manager-webpack5": "^6.3.2",
+    "@storybook/addon-links": "^6.3.0",
+    "@storybook/addon-a11y": "^6.3.0",
+    "identity-obj-proxy": "^3.0.0",
+    "postcss": "^8.3.5",
+    "@testing-library/jest-dom": "^5.11.10",
+    "@storybook/addon-postcss": "^2.0.0"
+  }
+}

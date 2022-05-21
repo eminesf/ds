@@ -1,0 +1,35 @@
+{
+  "name": "@agi/design-tokens",
+  "version": "1.2.1",
+  "main": "./dist/index.cjs.js",
+  "style": "./dist/index.css",
+  "module": "./dist/index.esm.js",
+  "exports": {
+    ".": {
+      "style": "./dist/index.css",
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.cjs.js"
+    },
+    "./style": "./dist/index.css"
+  },
+  "typings": "./dist/index.d.ts",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build:types": "tsc --declaration --emitDeclarationOnly --outDir dist",
+    "build:tokens": "style-dictionary build",
+    "build:javascript": "node build.js",
+    "build": "npm run build:tokens && concurrently \"npm run build:javascript\" \"npm run build:types\"",
+    "clean": "rm src/variables.css src/variables.ts src/fonts.css; rm -rf dist"
+  },
+  "devDependencies": {
+    "@agi/common-rig": "workspace:*",
+    "concurrently": "^6.2.0",
+    "postcss": "^8.3.5",
+    "postcss-font-magician": "~3.0.0",
+    "style-dictionary": "^2.10.3",
+    "typescript": "^4.3.4"
+  }
+}

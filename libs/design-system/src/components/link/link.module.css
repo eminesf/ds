@@ -1,0 +1,66 @@
+@import '../../styles/interactions';
+
+.link {
+  @apply transition-all duration-quickly font-regular outline-none w-max text-md tracking-lg;
+
+  &.-focused {
+    &:not(.-match-area),
+    &.-match-area .match-area {
+      @apply ring;
+    }
+  }
+
+  &.-sm {
+    @apply text-sm;
+  }
+
+  &.-md {
+    @apply text-md;
+  }
+
+  &.-lg {
+    @apply text-lg;
+  }
+
+  &.-decorated {
+    @apply border-b-sm;
+  }
+
+  &.-primary {
+    @apply text-primary-200;
+
+    &.-disabled {
+      @apply text-support-400;
+    }
+
+    &:not(.-disabled) {
+      @mixin on-hover {
+        @apply text-primary-300;
+      }
+
+      &.-focused,
+      &:active {
+        @apply text-primary-300;
+      }
+    }
+  }
+
+  &.-secondary {
+    @apply text-support-100;
+
+    &.-disabled {
+      @apply text-support-300;
+    }
+
+    &:not(.-disabled) {
+      @mixin on-hover {
+        @apply text-primary-100;
+      }
+
+      &.-focused,
+      &:active {
+        @apply text-primary-100;
+      }
+    }
+  }
+}

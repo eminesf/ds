@@ -1,0 +1,8 @@
+.site-cookie-consent {
+  @apply fixed top-none left-none bg-support-500 z-50;
+  @apply bg-opacity-75 w-screen h-full block;
+
+  & .modal {
+    @apply absolute bottom-none left-none w-screen max-w-screen rounded-t-2xlg;
+  }
+}

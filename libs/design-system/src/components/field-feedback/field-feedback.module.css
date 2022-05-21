@@ -1,0 +1,7 @@
+.field-feedback {
+  @apply h-sm;
+
+  @screen md {
+    @apply h-md;
+  }
+}

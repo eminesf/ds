@@ -1,0 +1,9 @@
+{
+  "extends": "@agi/common-rig/profile/default/tsconfig.json",
+  "include": ["src", "types"],
+  "compilerOptions": {
+    "rootDir": "./src",
+    "downlevelIteration": true,
+    "types": ["node", "jest", "testing-library__jest-dom"]
+  }
+}

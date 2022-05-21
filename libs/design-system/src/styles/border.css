@@ -1,0 +1,6 @@
+@define-mixin set-shadow-border $width, $color {
+  & {
+    @apply border-transparent;
+    box-shadow: 0 0 0 var($width) var($color);
+  }
+}

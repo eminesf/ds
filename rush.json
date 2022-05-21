@@ -1,0 +1,36 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/rush.schema.json",
+  "rushVersion": "5.47.0",
+  "pnpmVersion": "6.9.1",
+  "repository": {
+    "url": "http://gitlab.agibank-prd.in/sistemas/canais20/web/agi-monorepo",
+    "defaultBranch": "main"
+  },
+  "pnpmOptions": {
+    "strictPeerDependencies": false,
+    "useWorkspaces": true
+  },
+  "ensureConsistentVersions": true,
+  "projects": [
+    {
+      "packageName": "@agi/design-system",
+      "projectFolder": "libs/design-system",
+      "shouldPublish": true
+    },
+    {
+      "packageName": "@agi/design-tokens",
+      "projectFolder": "libs/design-tokens",
+      "shouldPublish": true
+    },
+    {
+      "packageName": "@agi/common-rig",
+      "projectFolder": "rigs/common",
+      "shouldPublish": false
+    },
+    {
+      "packageName": "@agi/tailwind-rig",
+      "projectFolder": "rigs/tailwind",
+      "shouldPublish": false
+    }
+  ]
+}

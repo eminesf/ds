@@ -1,0 +1,13 @@
+{
+  "name": "@agi/tailwind-rig",
+  "version": "1.0.0",
+  "scripts": {
+    "build": ""
+  },
+  "peerDependencies": {
+    "@agi/design-tokens": "workspace:*"
+  },
+  "devDependencies": {
+    "@agi/design-tokens": "workspace:*"
+  }
+}

@@ -1,0 +1,87 @@
+.label-value-group.-card {
+  @apply border-sm rounded-lg border-support-300;
+
+  & .label-value {
+    @apply border-none;
+  }
+}
+
+.label-value {
+  &.-support .value {
+    @apply text-support-500;
+  }
+
+  &.-neutral .value {
+    @apply text-primary-200;
+  }
+
+  &.-success .value {
+    @apply text-success-200;
+  }
+
+  &.-critical .value {
+    @apply text-critical-200;
+  }
+
+  &.-alert .value {
+    @apply text-alert-200;
+  }
+
+  & .action,
+  & .wrapper {
+    @apply outline-none;
+
+    &.-focused {
+      @apply ring;
+    }
+  }
+
+  &.-card {
+    @apply border-sm rounded-lg border-support-300;
+
+    & .wrapper {
+      @apply py-xsm pl-sm pr-none relative;
+
+      &:after {
+        content: '';
+        @apply absolute -right-sm top-1/2 transform -translate-y-1/2 h-lg border-l-sm border-support-300;
+      }
+    }
+
+    & .action {
+      @apply h-auto pr-sm;
+    }
+
+    @screen md {
+      & .wrapper {
+        @apply py-sm pl-md pr-none;
+
+        &:after {
+          @apply -right-md h-xlg;
+        }
+      }
+
+      & .action {
+        @apply pr-md;
+      }
+    }
+
+    @screen lg {
+      & .wrapper {
+        @apply py-md pl-lg pr-none;
+
+        &:after {
+          @apply -right-lg h-2xlg;
+        }
+      }
+
+      & .action {
+        @apply pr-lg;
+      }
+    }
+  }
+}
+
+.label-value-container {
+  @apply text-left;
+}

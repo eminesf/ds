@@ -1,0 +1,14 @@
+default:
+  image: node:16
+  before_script:
+    - npm install @microsoft/rush -g
+    - rush install
+
+test:
+  stage: test
+  script:
+    - rush build --verbose
+    - cd libs/design-system
+    - rushx lint
+    - rush test
+    - rushx chromatic

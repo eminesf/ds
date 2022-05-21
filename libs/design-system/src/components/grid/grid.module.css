@@ -1,0 +1,67 @@
+.grid {
+  --grid-gap: var(--spacing-none);
+  --grid-width: auto;
+  --grid-height: auto;
+  --grid-auto-flow: unset;
+  --grid-min-width: auto;
+  --grid-min-height: auto;
+  --grid-align-items: normal;
+  --grid-padding-top: var(--spacing-none);
+  --grid-padding-left: var(--spacing-none);
+  --grid-padding-right: var(--spacing-none);
+  --grid-template-rows: unset;
+  --grid-padding-bottom: var(--spacing-none);
+  --grid-template-areas: unset;
+  --grid-justify-content: normal;
+  --grid-template-columns: unset;
+  --grid-background-color: transparent;
+
+  gap: var(--grid-gap);
+  display: grid;
+  width: var(--grid-width);
+  height: var(--grid-height);
+  padding: var(--grid-padding-top) var(--grid-padding-right) var(--grid-padding-bottom)
+    var(--grid-padding-left);
+  min-width: var(--grid-min-width);
+  min-height: var(--grid-min-height);
+  align-items: var(--grid-align-items);
+  grid-auto-flow: var(--grid-auto-flow);
+  justify-content: var(--grid-justify-content);
+  background-color: var(--grid-background-color);
+  grid-template-rows: var(--grid-template-rows);
+  grid-template-areas: var(--grid-template-areas);
+  grid-template-columns: var(--grid-template-columns);
+}
+
+.grid-item {
+  --grid-item-area: unset;
+  --grid-item-row-end: auto;
+  --grid-item-row-span: auto;
+  --grid-item-row-start: auto;
+  --grid-item-column-end: auto;
+  --grid-item-column-span: auto;
+  --grid-item-column-start: auto;
+  --grid-item-background-color: transparent;
+
+  background-color: var(--grid-item-background-color);
+
+  & > * {
+    @apply w-full h-full;
+  }
+
+  &.-area {
+    grid-area: var(--grid-item-area);
+  }
+
+  &.-span {
+    grid-row: span var(--grid-item-row-span) / span var(--grid-item-row-span);
+    grid-column: span var(--grid-item-column-span) / span var(--grid-item-column-span);
+  }
+
+  &:not(.-span):not(.-area) {
+    grid-row-end: var(--grid-item-row-end);
+    grid-row-start: var(--grid-item-row-start);
+    grid-column-end: var(--grid-item-column-end);
+    grid-column-start: var(--grid-item-column-start);
+  }
+}

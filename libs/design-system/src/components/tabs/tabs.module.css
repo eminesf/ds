@@ -1,0 +1,68 @@
+@import '../../styles/interactions';
+
+.header {
+  @apply relative;
+
+  &::after {
+    content: '';
+    @apply w-full h-3xsm rounded-pill bg-support-200 absolute bottom-none;
+  }
+
+  @screen lg {
+    &::after {
+      @apply h-2xsm;
+    }
+  }
+}
+
+.tab {
+  @apply cursor-pointer transition-all outline-none duration-quickly relative;
+
+  &.-focused {
+    @apply ring;
+  }
+
+  &::after {
+    content: '';
+    @apply z-10 left-none w-full rounded-pill absolute;
+  }
+
+  &:not(.-selected) {
+    @mixin on-hover {
+      & > p {
+        @apply text-primary-200;
+      }
+
+      &::after {
+        @apply h-3xsm bottom-none bg-primary-200;
+      }
+    }
+  }
+
+  &.-selected::after {
+    bottom: -1px;
+    @apply h-2xsm bg-primary-300;
+  }
+
+  @screen lg {
+    &:not(.-selected) {
+      @mixin on-hover {
+        &::after {
+          @apply h-2xsm;
+        }
+      }
+    }
+
+    &.-selected::after {
+      @apply h-xsm -bottom-3xsm;
+    }
+  }
+}
+
+.panel {
+  @apply outline-none mt-xsm;
+
+  &.-focused {
+    @apply ring;
+  }
+}

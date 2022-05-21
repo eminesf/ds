@@ -1,0 +1,51 @@
+@import '../../styles/typography';
+
+.heading {
+  --heading-color: inherit;
+  --heading-break: break-word;
+
+  @mixin occupy-height;
+
+  color: var(--heading-color);
+  word-break: var(--text-break);
+
+  &.-regular {
+    @apply font-regular;
+  }
+
+  &.-semibold {
+    @apply font-semibold;
+  }
+
+  &.-bold {
+    @apply font-bold;
+  }
+
+  &.-sm {
+    @mixin heading-sm;
+  }
+
+  &.-md {
+    @mixin heading-md;
+  }
+
+  &.-lg {
+    @mixin heading-lg;
+  }
+
+  &.-xlg {
+    @mixin heading-xlg;
+  }
+
+  &.-left {
+    @apply text-left;
+  }
+
+  &.-right {
+    @apply text-right;
+  }
+
+  &.-center {
+    @apply text-center;
+  }
+}

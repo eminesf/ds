@@ -1,0 +1,129 @@
+@import '../../styles/interactions';
+
+.button {
+  @apply rounded-pill outline-none border-sm transition-all duration-quickly font-semibold tracking-xlg inline-flex;
+
+  &.-focused {
+    &:not(.-match-area),
+    &.-match-area .match-area {
+      @apply ring;
+    }
+  }
+
+  &.-sm,
+  &.-md {
+    @apply min-h-xlg h-xlg px-sm text-xsm;
+  }
+
+  &.-lg {
+    @apply min-h-3xlg h-3xlg px-md text-md font-bold;
+  }
+
+  @screen md {
+    @apply tracking-lg;
+
+    &.-sm {
+      @apply min-h-xlg h-xlg px-md text-md;
+    }
+
+    &.-md {
+      @apply min-h-3xlg h-3xlg px-lg text-md;
+    }
+
+    &.-lg {
+      @apply min-h-4xlg h-4xlg px-xlg text-lg tracking-md font-semibold;
+    }
+  }
+
+  &.-primary {
+    &:not(.-outlined) {
+      @apply bg-primary-200 border-primary-200 text-support-100;
+
+      &.-disabled {
+        @apply bg-support-400 border-support-400;
+      }
+
+      &:not(.-disabled) {
+        &.-focused {
+          @apply bg-primary-300 border-primary-300;
+        }
+
+        @mixin on-hover {
+          @apply bg-primary-300 border-primary-300;
+        }
+
+        &:active {
+          @apply bg-primary-400 border-primary-400 text-support-100;
+        }
+      }
+    }
+
+    &.-outlined {
+      @apply border-primary-300 text-primary-300;
+
+      &.-disabled {
+        @apply text-support-400 border-support-400;
+      }
+
+      &:not(.-disabled) {
+        &.-focused {
+          @apply bg-primary-300 border-primary-300 text-support-100;
+        }
+
+        @mixin on-hover {
+          @apply bg-primary-300 border-primary-300 text-support-100;
+        }
+
+        &:active {
+          @apply bg-primary-400 border-primary-400 text-support-100;
+        }
+      }
+    }
+  }
+
+  &.-secondary {
+    &:not(.-outlined) {
+      @apply bg-support-100 border-support-100 text-primary-300;
+
+      &.-disabled {
+        @apply bg-support-300 border-support-300 text-support-400;
+      }
+
+      &:not(.-disabled) {
+        &.-focused {
+          @apply bg-primary-300 border-primary-300 text-support-100;
+        }
+
+        @mixin on-hover {
+          @apply bg-primary-300 border-primary-300 text-support-100;
+        }
+
+        &:active {
+          @apply bg-primary-400 border-primary-400 text-support-100;
+        }
+      }
+    }
+
+    &.-outlined {
+      @apply border-support-100 text-support-100;
+
+      &.-disabled {
+        @apply text-primary-100 border-primary-100;
+      }
+
+      &:not(.-disabled) {
+        &.-focused {
+          @apply bg-primary-300 border-primary-300 text-support-100;
+        }
+
+        @mixin on-hover {
+          @apply bg-primary-300 border-primary-300 text-support-100;
+        }
+
+        &:active {
+          @apply bg-primary-400 border-primary-400 text-support-100;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/command-line.schema.json",
+  "commands": [
+     {
+      "commandKind": "bulk",
+      "name": "build",
+      "summary": "Build all projects that haven't been built, or have changed since they were last built",
+      "description": "This command is similar to \"rush rebuild\", except that \"rush build\" performs...",
+      "safeForSimultaneousRushProcesses": false,
+      "enableParallelism": true,
+      "ignoreDependencyOrder": false,
+      "ignoreMissingScript": false,
+      "allowWarningsInSuccessfulBuild": true
+    },
+    {
+      "name": "wipe",
+      "summary": "Wipe monorepo",
+      "commandKind": "global",
+      "shellCommand": "rush clean; rush purge; rush update; rush rebuild",
+      "safeForSimultaneousRushProcesses": true
+    },
+    {
+      "name": "pack",
+      "summary": "Generate tar.gz files",
+      "commandKind": "global",
+      "shellCommand": "rush rebuild; rush publish --pack --include-all --publish",
+      "safeForSimultaneousRushProcesses": true
+    },
+    {
+      "name": "clean",
+      "summary": "Clean dist files",
+      "commandKind": "bulk",
+      "enableParallelism": true,
+      "ignoreMissingScript": true
+    },
+    {
+      "name": "prettier",
+      "commandKind": "global",
+      "summary": "Used by the pre-commit Git hook. This command invokes Prettier to reformat staged changes.",
+      "safeForSimultaneousRushProcesses": true,
+      "autoinstallerName": "rush-prettier",
+      "shellCommand": "pretty-quick --staged"
+    },
+    {
+      "name": "test",
+      "summary": "Run tests",
+      "commandKind": "bulk",
+      "enableParallelism": true,
+      "ignoreMissingScript": true,
+      "allowWarningsInSuccessfulBuild": true
+    }
+  ]
+}

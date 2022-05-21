@@ -1,0 +1,9 @@
+.icon-hero {
+  &.-center {
+    @apply text-center;
+  }
+
+  &.-right {
+    @apply text-right;
+  }
+}

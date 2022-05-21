@@ -1,0 +1,50 @@
+.wrapper {
+  --icon-size: 0;
+  --icon-color: inherit;
+  --icon-padding-size: 0;
+
+  @apply transition-all duration-quickly;
+
+  color: var(--icon-color);
+
+  & > .icon {
+    width: var(--icon-size) !important;
+    height: var(--icon-size) !important;
+    padding: var(--icon-padding-size);
+  }
+
+  &.-sm {
+    --icon-size: 16px;
+    --icon-padding-size: 2px;
+  }
+
+  &.-md {
+    --icon-size: 20px;
+    --icon-padding-size: 2px;
+  }
+
+  &.-lg {
+    --icon-size: 24px;
+    --icon-padding-size: 2px;
+  }
+
+  &.-xlg {
+    --icon-size: 32px;
+    --icon-padding-size: 2px;
+  }
+
+  &.-2xlg {
+    --icon-size: 40px;
+    --icon-padding-size: 4px;
+  }
+
+  &.-3xlg {
+    --icon-size: 64px;
+    --icon-padding-size: 4px;
+  }
+
+  &.-4xlg {
+    --icon-size: 80px;
+    --icon-padding-size: 8px;
+  }
+}

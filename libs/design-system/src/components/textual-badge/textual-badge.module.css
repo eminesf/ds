@@ -1,0 +1,15 @@
+.textual-badge {
+  @apply rounded-pill w-max;
+
+  &.-alert {
+    @apply bg-alert-100;
+  }
+
+  &.-success {
+    @apply bg-success-100;
+  }
+
+  &.-neutral {
+    @apply bg-primary-50;
+  }
+}

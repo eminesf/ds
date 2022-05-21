@@ -1,0 +1,65 @@
+@import '../../styles/typography';
+@import '../../styles/interactions';
+
+.text-field {
+  @apply transition-all duration-quickly text-support-500 relative;
+
+  @mixin text-lg;
+
+  & .label {
+    @apply leading-md;
+  }
+
+  & .label-active {
+    @mixin text-sm;
+    @apply text-support-400;
+  }
+
+  & .input {
+    @apply w-full bg-transparent z-10 outline-none;
+  }
+
+  &.-focused .input-container {
+    @apply border-primary-200;
+  }
+
+  &.-invalid .input-container {
+    @apply border-critical-300;
+  }
+
+  & .input-container {
+    @apply border-b-sm border-support-400 transition-all duration-quickly;
+
+    @mixin on-hover {
+      @apply border-primary-200;
+    }
+  }
+
+  &.-disabled {
+    @apply text-support-400;
+
+    & .input-container {
+      @apply border-support-400;
+    }
+  }
+
+  @screen md {
+    & .label {
+      @apply leading-xlg;
+    }
+
+    & .input-container {
+      @apply border-b-md;
+    }
+  }
+
+  @screen lg {
+    & .label {
+      @apply leading-2xlg;
+    }
+
+    & .input-container {
+      @apply border-b-md;
+    }
+  }
+}

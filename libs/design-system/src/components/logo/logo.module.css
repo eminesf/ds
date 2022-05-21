@@ -1,0 +1,26 @@
+.logo {
+  --logo-height: 0;
+  height: var(--logo-height);
+
+  @apply w-auto;
+
+  &.-sm {
+    --logo-height: 48px;
+  }
+
+  &.-md {
+    --logo-height: 64px;
+  }
+
+  &.-lg {
+    --logo-height: 104px;
+  }
+
+  &.-primary [data-agi] {
+    @apply fill-primary-200;
+  }
+
+  &.-secondary [data-agi] {
+    @apply fill-support-100;
+  }
+}

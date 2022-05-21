@@ -1,0 +1,3 @@
+.app-overlay-footer {
+  @apply fixed bottom-none left-none w-full bg-support-100 shadow-elevation-4 z-40;
+}

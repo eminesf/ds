@@ -1,0 +1,38 @@
+{
+  "animation": {
+    "duration": {
+      "immediately": {
+        "value": 0,
+        "attributes": {
+          "category": "time"
+        }
+      },
+      "quickly": {
+        "value": 0.2,
+        "attributes": {
+          "category": "time"
+        }
+      },
+      "slowly": {
+        "value": 0.4,
+        "attributes": {
+          "category": "time"
+        }
+      }
+    },
+    "function": {
+      "ease": {
+        "value": "ease"
+      },
+      "ease-in": {
+        "value": "ease-in"
+      },
+      "ease-out": {
+        "value": "ease-out"
+      },
+      "ease-in-out": {
+        "value": "ease-in-out"
+      }
+    }
+  }
+}

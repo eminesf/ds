@@ -1,0 +1,69 @@
+@import '../../styles/typography';
+@import '../../styles/interactions';
+
+.currency-field {
+  & .input {
+    @apply w-full bg-transparent outline-none font-bold text-support-500;
+
+    @mixin heading-xlg;
+
+    &::placeholder {
+      @apply text-support-400;
+    }
+
+    &:focus {
+      caret-color: var(--color-primary-200);
+      &::placeholder {
+        @apply text-support-300;
+      }
+    }
+  }
+
+  &.-focused .input-container {
+    @apply border-primary-200;
+  }
+
+  &.-invalid .input-container {
+    @apply border-critical-300;
+  }
+
+  & .input-container {
+    @apply border-b-sm border-support-400 z-10 transition-all duration-quickly;
+
+    &::before {
+      content: 'R$';
+      @mixin heading-xlg;
+      @apply text-primary-200 font-bold;
+    }
+
+    @mixin on-hover {
+      @apply border-primary-200;
+    }
+  }
+
+  &.-disabled {
+    & .input {
+      @apply text-support-400;
+    }
+
+    & .input-container {
+      @apply border-support-400;
+
+      &::before {
+        @apply text-support-400;
+      }
+    }
+  }
+
+  @screen md {
+    & .input-container {
+      @apply border-b-md;
+    }
+  }
+
+  @screen lg {
+    & .input-container {
+      @apply border-b-lg;
+    }
+  }
+}

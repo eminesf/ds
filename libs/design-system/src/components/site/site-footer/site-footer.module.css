@@ -1,0 +1,32 @@
+@import '../../../styles/typography';
+
+.site-footer .wrapper {
+  @apply container;
+}
+
+.site-footer-section:not(:last-child) {
+  @apply border-b-sm border-support-300;
+}
+
+.site-footer-nav-sub-item {
+  @mixin text-sm;
+
+  @apply w-max;
+}
+
+.site-footer-link {
+  @mixin text-sm;
+
+  @apply font-semibold text-primary-200;
+}
+
+.site-footer-link,
+.site-footer-nav-sub-item,
+.site-footer-stores .action,
+.site-footer-label-value-value {
+  @apply outline-none;
+
+  &.-focused {
+    @apply ring;
+  }
+}

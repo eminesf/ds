@@ -1,0 +1,18 @@
+.chat-wpp {
+  position: fixed;
+  width: 48px;
+  right: 35px;
+  bottom: 35px;
+  visibility: hidden;
+  z-index: 100;
+
+  & .button-option {
+    @apply flex justify-center items-center outline-none rounded-circle border-none shadow-elevation-2;
+    width: 48px;
+    height: 48px;
+  }
+
+  & .button-hidden {
+    display: none !important;
+  }
+}

@@ -1,0 +1,62 @@
+@import '../../styles/interactions';
+
+.text-button {
+  @apply transition-all duration-quickly font-regular outline-none w-max text-md tracking-lg;
+
+  &.-focused {
+    &:not(.-match-area),
+    &.-match-area .match-area {
+      @apply ring;
+    }
+  }
+
+  &.-sm {
+    @apply min-h-xlg h-xlg;
+  }
+
+  &.-md {
+    @apply min-h-2xlg h-2xlg;
+  }
+
+  &.-lg {
+    @apply min-h-3xlg h-3xlg text-lg tracking-md;
+  }
+
+  &.-primary {
+    @apply text-primary-200;
+
+    &.-disabled {
+      @apply text-support-400;
+    }
+
+    &:not(.-disabled) {
+      @mixin on-hover {
+        @apply text-primary-300;
+      }
+
+      &.-focused,
+      &:active {
+        @apply text-primary-300;
+      }
+    }
+  }
+
+  &.-secondary {
+    @apply text-support-100;
+
+    &.-disabled {
+      @apply text-support-300;
+    }
+
+    &:not(.-disabled) {
+      @mixin on-hover {
+        @apply text-primary-100;
+      }
+
+      &.-focused,
+      &:active {
+        @apply text-primary-100;
+      }
+    }
+  }
+}

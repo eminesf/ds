@@ -1,0 +1,121 @@
+@import '../../../styles/typography';
+@import '../../../styles/interactions';
+
+.site-header {
+  @apply fixed w-full top-none left-none z-20;
+
+  &:before {
+    content: '';
+    z-index: -1;
+
+    @apply absolute left-none top-none w-full h-full max-h-none transition-all duration-quickly bg-primary-200;
+  }
+
+  &.-activated:before {
+    @apply max-h-full;
+  }
+
+  &.-opened .nav {
+    @apply border-b-sm border-primary-100;
+  }
+
+  & .nav {
+    @apply container;
+  }
+
+  & .menu {
+    @apply overflow-x-auto;
+  }
+
+  & .logo {
+    @apply outline-none;
+
+    &.-focused {
+      @apply ring;
+    }
+  }
+}
+
+.site-header-item {
+  @apply relative min-w-min text-support-100 outline-none px-md;
+
+  @screen md {
+    @apply px-none;
+  }
+
+  @mixin on-hover {
+    @apply font-semibold;
+  }
+
+  &.-focused {
+    @apply font-semibold ring;
+  }
+
+  &.-activated {
+    @apply font-bold;
+
+    & .icon {
+      @apply transform -rotate-180;
+    }
+  }
+
+  & .underline {
+    @apply w-full border-t-sm border-support-100;
+  }
+
+  & .content {
+    @mixin text-md;
+
+    &::before {
+      content: attr(data-text);
+
+      @apply block font-semibold h-none overflow-hidden;
+    }
+  }
+}
+
+.site-header-subitem {
+  @mixin text-md;
+
+  @apply text-support-100 outline-none h-4xlg flex items-center px-md;
+
+  &.-focused {
+    @apply ring;
+  }
+
+  @screen md {
+    @apply px-none h-auto;
+  }
+}
+
+.site-header-action {
+  @apply w-full rounded-none;
+
+  @screen md {
+    @apply w-auto rounded-pill;
+  }
+}
+
+.overlay {
+  @apply w-full bg-primary-300 relative;
+
+  @screen md {
+    @apply absolute top-full left-none px-md bg-primary-200;
+  }
+
+  & .content {
+    @apply container;
+
+    @screen md {
+      @apply border-t-sm border-primary-100 py-2xlg;
+    }
+  }
+}
+
+.site-header-button {
+  @apply outline-none;
+
+  &.-focused {
+    @apply ring;
+  }
+}

@@ -1,0 +1,113 @@
+@import '../../styles/typography';
+@import '../../styles/interactions';
+@import '../../styles/border';
+
+.checkbox-group {
+  & .checkbox {
+    @apply w-auto h-full;
+
+    &.-checked .label {
+      @mixin set-shadow-border --spacing-3-xsm, --color-primary-300;
+    }
+  }
+
+  & .label {
+    @apply rounded-md border-sm border-support-300 h-full p-xsm transition-all duration-quickly;
+  }
+
+  @screen md {
+    & .label {
+      @apply p-sm;
+    }
+  }
+
+  @screen lg {
+    & .label {
+      @apply p-md;
+    }
+  }
+}
+
+.wrapper {
+  --checkbox-icon-width: var(--spacing-md);
+  --checkbox-field-feedback-offset: var(--spacing-2-xsm);
+
+  & .field-feedback {
+    padding-left: calc(var(--checkbox-icon-width) + var(--checkbox-field-feedback-offset));
+  }
+
+  &.-invalid .field-feedback {
+    @apply -ml-2xsm;
+  }
+
+  @screen md {
+    --checkbox-field-feedback-offset: var(--spacing-xsm);
+  }
+
+  @screen lg {
+    --checkbox-field-feedback-offset: var(--spacing-sm);
+  }
+}
+
+.checkbox {
+  @apply relative w-max max-w-full;
+
+  &.-focused .label {
+    @apply ring;
+  }
+
+  &.-highlighted .icon-wrapper:before {
+    @mixin heading-sm;
+  }
+
+  & .icon-wrapper {
+    @apply text-primary-300 relative;
+
+    & .icon {
+      @apply absolute top-1/2 transform -translate-y-1/2 left-none;
+
+      &.-filled {
+        @apply opacity-0;
+      }
+    }
+
+    &:before {
+      content: '.';
+
+      @apply invisible w-md;
+      @mixin text-md;
+    }
+  }
+
+  &:not(.-disabled) {
+    @mixin on-hover {
+      & .label .icon {
+        @apply opacity-0;
+
+        &.-filled {
+          @apply opacity-100;
+        }
+      }
+    }
+  }
+
+  &.-checked .label .icon {
+    @apply opacity-0;
+
+    &.-filled {
+      @apply opacity-100;
+    }
+  }
+
+  &:not(.-checked):not(.-disabled) {
+    @mixin on-hover {
+      & .label .icon-wrapper {
+        @apply text-primary-100;
+      }
+    }
+  }
+
+  &.-disabled .icon-wrapper {
+    @apply text-support-400;
+  }
+}

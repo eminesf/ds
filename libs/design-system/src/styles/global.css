@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind screens;
+
+body {
+  @apply font-base text-support-500;
+
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+#blip-chat-open-iframe{
+  visibility: hidden !important;
+}
+
+@media only screen and (min-device-width: 480px), only screen and (min-width: 825px) and (min-height: 600px) {
+  #blip-chat-iframe{
+    bottom: calc(35px) !important;
+    right: 35px !important; 
+  }
+}
+
