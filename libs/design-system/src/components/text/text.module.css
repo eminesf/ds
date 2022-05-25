@@ -22,7 +22,7 @@
   }
 
   &.-xsm {
-    @mixin text-xsm;
+    @mixin text-xs;
   }
 
   &.-sm {
@@ -30,7 +30,7 @@
   }
 
   &.-md {
-    @mixin text-md;
+    @mixin text-base;
   }
 
   &.-lg {
